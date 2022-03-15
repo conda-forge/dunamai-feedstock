@@ -1,5 +1,5 @@
 {% set name = "dunamai" %}
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 
 
 package:
@@ -8,24 +8,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8f880666168bf7be6d795e39a6c80451caf7ec430f0f0c2d920e5d9bbb439b15
+  sha256: 338f9be40c9aa974c4bdc4fb6d49a630692315593c45b23b5941c5298c075567
 
 build:
   number: 0
   noarch: python
   entry_points:
     - dunamai = dunamai.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv --use-deprecated=out-of-tree-build
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - poetry >=0.12
-    - python >=3.5,<4.0
+    - poetry-core >=1.0.0
+    - python >=3.5
   run:
     - importlib-metadata >=1.6.0
     - packaging >=20.9
-    - python >=3.5,<4.0
+    - python >=3.5
 
 test:
   imports:
