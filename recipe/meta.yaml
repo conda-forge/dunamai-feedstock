@@ -1,5 +1,5 @@
 {% set name = "dunamai" %}
-{% set version = "1.12.0" %}
+{% set version = "1.13.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fac4f09e2b8a105bd01f8c50450fea5aa489a6c439c949950a65f0dd388b0d20
+  sha256: 5bf9e5baaa673b692a9613e4961b18b6d2d9743412f7bbcf4a39c84a979f47e2
 
 build:
   number: 0
