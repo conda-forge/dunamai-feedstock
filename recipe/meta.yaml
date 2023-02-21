@@ -1,5 +1,5 @@
 {% set name = "dunamai" %}
-{% set version = "1.15.0" %}
+{% set version = "1.16.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d6088922df3226a8234c228803bb01902a83766d04c2cddb33d4dd3bf85ec9a5
+  sha256: bfe8e23cc5a1ceed1c7f791674ea24cf832a53a5da73f046eeb43367ccfc3f77
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - poetry-core >=1.0.0
     - python >=3.5
   run:
-    - importlib-metadata >=1.6.0
+    - importlib-metadata >=1.6.0python<3.8
     - packaging >=20.9
     - python >=3.5
 
