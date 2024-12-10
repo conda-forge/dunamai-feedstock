@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 375a0b21309336f0d8b6bbaea3e038c36f462318c68795166e31f9873fdad676
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - dunamai = dunamai.__main__:main
@@ -21,11 +21,11 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - importlib-metadata >=1.6.0
     - packaging >=20.9
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -35,6 +35,7 @@ test:
     - dunamai --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/mtkennerly/dunamai
