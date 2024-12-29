@@ -23,7 +23,6 @@ requirements:
     - poetry-core >=1.0.0
     - python {{ python_min }}
   run:
-    - importlib-metadata >=1.6.0
     - packaging >=20.9
     - python >={{ python_min }}
 
