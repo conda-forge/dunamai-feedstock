@@ -1,5 +1,5 @@
 {% set name = "dunamai" %}
-{% set version = "1.26.3" %}
+{% set version = "1.26.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fe2f732186710ee5048044fdbef6c76c6afbb9ee7de4f6d00cf34256e9ec2e7f
+  sha256: 13b2b2af2af44158ef02f22ae4ff1b280b221c2760bd0f5891ef58b884678754
 
 build:
   number: 0
